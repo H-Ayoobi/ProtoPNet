@@ -31,7 +31,7 @@ from settings import base_architecture, img_size, prototype_shape, num_classes, 
 
 base_architecture_type = re.match('^[a-z]*', base_architecture).group(0)
 
-model_dir = './saved_models/' + base_architecture + '/' + experiment_run + '/'
+model_dir = 'data2/hay/saved_models/' + base_architecture + '/' + experiment_run + '/'
 makedir(model_dir)
 shutil.copy(src=os.path.join(os.getcwd(), __file__), dst=model_dir)
 shutil.copy(src=os.path.join(os.getcwd(), 'settings.py'), dst=model_dir)
