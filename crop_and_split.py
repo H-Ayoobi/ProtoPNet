@@ -13,12 +13,13 @@ def makedir(path):
     if not os.path.exists(path):
         os.makedirs(path)
 # Set the path to the dataset
-dataset_path = "/Users/hayoobi/PycharmProjects/ProtoArgNet/CUB_200_2011"
+# dataset_path = "/Users/hayoobi/PycharmProjects/ProtoArgNet/CUB_200_2011"
+dataset_path = "/data2/CUB200/CUB_200_2011"
 
 # Set the path for saving the processed data
-cropped_path = "/Users/hayoobi/PycharmProjects/ProtoArgNet/CUB_200_2011/cub200_cropped"
-trained_cropped = "/Users/hayoobi/PycharmProjects/ProtoArgNet/CUB_200_2011/cub200_cropped/train_cropped"
-test_cropped = "/Users/hayoobi/PycharmProjects/ProtoArgNet/CUB_200_2011/cub200_cropped/test_cropped"
+cropped_path = os.path.join(dataset_path, "cub200_cropped")
+trained_cropped = os.path.join(cropped_path, "train_cropped")
+test_cropped = os.path.join(cropped_path, "test_cropped")
 makedir(cropped_path)
 makedir(trained_cropped)
 makedir(test_cropped)
